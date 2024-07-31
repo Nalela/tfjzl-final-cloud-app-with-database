@@ -33,14 +33,16 @@ CSRF_TRUSTED_ORIGINS = ['https://*.cognitiveclass.ai']
 
 # Application definition
 INSTALLED_APPS = [
-    'onlinecourse.apps.OnlinecourseConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'onlinecourse.apps.OnlinecourseConfig',  # Correct entry
 ]
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -125,4 +127,3 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(STATIC_ROOT, 'media')
 MEDIA_URL = '/media/'
-
